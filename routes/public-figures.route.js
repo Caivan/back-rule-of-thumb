@@ -5,7 +5,7 @@ const publicFiguresController = require ('../controllers/public-figures.controll
 // PUBLIC FIGURE
 router.get('/public-figure', publicFiguresController.getAll);
 router.get('/public-figure/:id', publicFiguresController.getById);
-router.get('/public-figure/random', publicFiguresController.getRandomActive);
+router.get('/public-figure-random', publicFiguresController.getRandomActive);
 router.post('/public-figure', publicFiguresController.create);
 router.put('/public-figure/:id', publicFiguresController.update);
 router.patch('/public-figure/:id', publicFiguresController.update);

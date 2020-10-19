@@ -55,11 +55,10 @@ PublicFigureController.create = async function(req,res){
 
 // SEARCH AND RETURN RANDOM & ACTIVE VOTING PUBLIC FIGURE
 PublicFigureController.getRandomActive = async function(req, res) {
-
     try{
         const publicFigure = await PublicFigure.aggregate(
             [
-                { $match: {active: true} },
+                { $match: {activeforHero: true} },
                 { $sample: {size: 1} }
             ]
         );

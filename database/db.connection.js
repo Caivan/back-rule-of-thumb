@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const dbconfig = require('./db.config');
-const MONGO_DB_URI = `mongodb+srv://${dbconfig.USER}:${dbconfig.PASSWORD}@${dbconfig.HOST}/${dbconfig.DB}`;
+const MONGO_DB_URI = `${dbconfig.PREFIX}://${dbconfig.USER}:${dbconfig.PASSWORD}@${dbconfig.HOST}/${dbconfig.DB}`;
 const uri = process.env.MONGODB_URI || MONGO_DB_URI;
 
 const db = mongoose.connection;

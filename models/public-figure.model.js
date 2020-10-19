@@ -21,7 +21,7 @@ const publicFigureSchema = new Schema ({
     wikiUrl: String,
     votingText: String,
     heroImage: String,
-    activeCampaing: Boolean,
+    activeforHero: Boolean,
     comments:[Comment], 
 },{autoCreate: true});
 

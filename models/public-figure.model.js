@@ -16,11 +16,11 @@ const publicFigureSchema = new Schema ({
     description: String,
     qtyLikes: Number,
     qtyDislikes: Number,
-    imageUrl: String,
+    image: String,
     category: String,
     wikiUrl: String,
     votingText: String,
-    heroImageUrl: String,
+    heroImage: String,
     activeCampaing: Boolean,
     comments:[Comment], 
 },{autoCreate: true});

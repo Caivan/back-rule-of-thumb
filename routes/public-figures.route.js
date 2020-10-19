@@ -8,6 +8,7 @@ router.get('/public-figure/:id', publicFiguresController.getById);
 router.get('/public-figure/random', publicFiguresController.getRandomActive);
 router.post('/public-figure', publicFiguresController.create);
 router.put('/public-figure/:id', publicFiguresController.update);
+router.patch('/public-figure/:id', publicFiguresController.update);
 router.delete('/public-figure/:id', publicFiguresController.delete);
 
 

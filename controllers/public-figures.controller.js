@@ -22,7 +22,7 @@ PublicFigureController.getAll = async function(req, res) {
 PublicFigureController.getById = async function(req, res) {
     const paramID = req.params.id;
     try{
-        const publicFigure = await PublicFigure.findOne({ _id: paramID});
+        const publicFigure = await PublicFigure.findOne({ _id: ObjectId(paramID)});
         res.json(publicFigure);
     }catch (err){
         console.log(err);
@@ -75,8 +75,8 @@ PublicFigureController.getRandomActive = async function(req, res) {
 PublicFigureController.update = async function(req,res){
     const paramID = req.params.id;
     if(req.body){
-        console.log(req.body);
-        PublicFigure.updateOne({_id: paramID},req.body,(err,savedDoc)=>{
+        console.log('Body REQ',req.body);
+        PublicFigure.updateOne({_id: ObjectId(paramID)},req.body,(err,savedDoc)=>{
             if(err){
                 console.log (err);
                 res.status(500).send({
@@ -95,7 +95,7 @@ PublicFigureController.update = async function(req,res){
 PublicFigureController.delete = async function(req,res){
     const paramID = req.params.id;
     if(paramID){
-        PublicFigure.deleteOne({_id: paramID},(err,savedDoc)=>{
+        PublicFigure.deleteOne({_id: ObjectId(paramID)},(err,savedDoc)=>{
             if(err){
                 console.log (err);
                 res.status(500).send({

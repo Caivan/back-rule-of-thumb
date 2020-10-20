@@ -1,6 +1,26 @@
 # Description back-rule-of-thumb
-Small and simple API Rest to support the rule of thumb application.
 
+Small and simple API Rest to support the rule of thumb application. This application uses MongoDB as a database to persist the information.
+
+# Features
+
+This is just an example of an small API Rest, to support the basic infor persistance of the Rule of Thumbs App
+
+## API Rest enpoint of Public Figures
+ API Description 
+ - GET All public figures, use the HTTP method GET , returns all public figures stored in the database 
+   ´´´ https://<host>:<port>/public-figure ´´´
+ - GET one random public figure, use the HTTP method GET, this return one random objects which has the activeforHero property setted to true
+   ´´´ https://<host>:<port>/public-figure-random ´´´
+ - POST one new public figure, use the HTTP method POST, create a new public figure object.
+   ´´´ https://<host>:<port>/public-figure ´´´
+ - PUT updates a new user, use the HTTP method PUT, updates a public figure object on the DB
+   ´´´ https://<host>:<port>/public-figure/:id ´´´
+ - PATCH update a public figure information, use the HTTP PATCH method
+   ´´´ https://<host>:<port>/public-figure/:id ´´´
+ - DELETE a public figure object, use the HTTP PATCH method
+   ´´´ https://<host>:<port>/public-figure/:id ´´´
+ 
 # Getting started
 
 To get the Node server running locally:
